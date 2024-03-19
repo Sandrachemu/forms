@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bills</title>
+  <style>
+    button{
+      background-color: rgb(37, 150, 170);
+      
+    }
+    h3,h4{
+      background-color: #6EC7ED;
+       margin-bottom: 10px;
+       padding: 5px;
+
+    }
+  
+  
+      
+    
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet">
+</head>
+<body>
+  <!-- <div class="container" style="background-color: #f0f5f8; padding: 20px;"> -->
+      <form class="mat-elevation-z8" style="padding: 20px;">
+      <h3 >Bills Capture</h3>
+
+        <button mat-stroked-button>Add</button>
+        <button mat-stroked-button>Verify</button>
+        <button mat-stroked-button>Edit</button>
+        <button mat-stroked-button>Enquire</button>
+        
+
+          <h4 style=>General Information</h4>
+      
+        
+            <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label >Description</mat-label>
+              <input formControlName="description" required>
+          </mat-form-field>
+        
+         
+        
+          <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label style="margin-left: 200px;">Owner Name</mat-label>
+              <input formControlName="ownerName" required>
+          </mat-form-field>
+          
+          <br><br>
+        
+          <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label>Billing Period</mat-label>
+              <input formControlName ="billingPeriod" required>
+          </mat-form-field>
+          
+        
+          
+          <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label style="margin-left: 200px;">Maturity Date</mat-label>
+              <input type="date" formControlName="maturityDate" required>
+          </mat-form-field>
+      
+      
+        <br><br>
+        
+          <mat-form-field appearance="fill" style="width: 100%;">
+            <mat-label>Invoice No</mat-label>
+            <input formControlName ="invoiceNo" required>
+        </mat-form-field>
+        
+        
+        
+        <mat-form-field appearance="fill" style="width:100%;">
+          <mat-label style="margin-left: 200px;">Invoice Date</mat-label>
+          <input type="date" formControlName="invoiceDte" required>
+      </mat-form-field>
+    
+      <br><br>
+    
+      <mat-form-field appearance="fill" style="width:100%;">
+        <mat-label>Upload document</mat-label>
+        <input type="file" formControlName="uploadDocument" required>
+      </mat-form-field>
+    
+      <br><br>
+      
+        
+          <h4 style="background-color: #6EC7ED; margin-top: 10px; padding: 5px;">Valuation</h4>
+          <mat-form-field appearance="fill" style="width: 100%;">
+            <mat-form-field>
+              <mat-label>Currency</mat-label>
+              <select matNativeControl required>
+                <option value="kenyanshillins">Kenyan Shillings</option>
+                <option value="ugandanshillings">Ugandan Shillings</option>
+                <option value="usd">USD</option>
+              </select>
+            </mat-form-field>
+          </mat-form-field>
+          
+          <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label style="margin-left: 200px;">Collateral Value</mat-label>
+              <input formControlName="collateralValue" required>
+          </mat-form-field>
+          <br><br>
+          <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label>Margin Rate</mat-label>
+              <input formControlName="marginRate" required>
+          </mat-form-field>
+          
+          <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label style="margin-left: 200px;">Charges</mat-label>
+              <input formControlName="charges" required>
+          </mat-form-field>
+          <br><br>
+          <h4 style="background-color: #6EC7ED; margin-top: 10px; padding: 5px;">Storage Location</h4>
+          <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label>Country Code</mat-label>
+              <input formControlName="countryCode" required>
+          </mat-form-field>
+          
+          <mat-form-field appearance="fill" style="width: 100%;">
+              <mat-label style="margin-left: 200px;">Region</mat-label>
+              <input formControlName="region" required>
+              <br><br>
+          </mat-form-field>
+          <mat-form-field appearance="fill" style="width: 100%;">
+            <mat-label>Office Location</mat-label>
+            <input formControlName="officeLocation" required>
+          </mat-form-field>
+          
+         <mat-form-field appearance="fill" style="width: 100%;">
+          <mat-label style="margin-left: 200px;">Department</mat-label>
+          <input formControlName="department" required>
+        </mat-form-field>
+        <br><br>
+        <mat-form-field appearance="fill" style="width: 100%;">
+           <mat-label>Drawer No</mat-label>
+        <input formControlName="drawerNo" required>
+           </mat-form-field>
+      
+        <mat-form-field appearance="fill" style="width: 100%;">
+           <mat-label style="margin-left: 200px;">File No</mat-label>
+           <input formControlName="fileNo" required>
+        </mat-form-field>
+        
+        <br><br>
+
+        <button mat-stroked-button (click)="onSubmit()">Submit</button>
+        <button mat-stroked-button>Cancel</button>
+
+      </form>
+  <!-- </div> -->
+</body>
+</html>
